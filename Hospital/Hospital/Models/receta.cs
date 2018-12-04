@@ -14,11 +14,21 @@ namespace Hospital.Models
     
     public partial class receta
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public receta()
+        {
+            this.visita = new HashSet<visita>();
+        }
+    
         public int idReceta { get; set; }
-        public int idPaciente { get; set; }
+        public string idPaciente { get; set; }
         public int idEmpleado { get; set; }
-        public DateTime fechaReceta { get; set; }
+        public System.DateTime fechaReceta { get; set; }
         public string detalleReceta { get; set; }
-       
+    
+        public virtual empleado empleado { get; set; }
+        public virtual paciente paciente { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<visita> visita { get; set; }
     }
 }

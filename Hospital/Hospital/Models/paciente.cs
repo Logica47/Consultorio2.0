@@ -14,11 +14,30 @@ namespace Hospital.Models
     
     public partial class paciente
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public paciente()
+        {
+            this.cita = new HashSet<cita>();
+            this.consulta = new HashSet<consulta>();
+            this.factura = new HashSet<factura>();
+            this.receta = new HashSet<receta>();
+        }
+    
         public string cedula { get; set; }
         public string nombre { get; set; }
         public string apellido { get; set; }
-        public DateTime fechaNacimiento { get; set; }
-        public string tipoSangre { get; set; }
+        public System.DateTime fechaNacimiento { get; set; }
+        public int tipoSangre { get; set; }
         public string telefono { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<cita> cita { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<consulta> consulta { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<factura> factura { get; set; }
+        public virtual tipoSangre tipoSangre1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<receta> receta { get; set; }
     }
 }

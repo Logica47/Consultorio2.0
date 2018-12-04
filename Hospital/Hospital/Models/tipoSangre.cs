@@ -12,17 +12,18 @@ namespace Hospital.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class visita
+    public partial class tipoSangre
     {
-        public int idVisita { get; set; }
-        public int idEmpleado { get; set; }
-        public int idReceta { get; set; }
-        public System.DateTime fechaLlegada { get; set; }
-        public System.DateTime proximaFecha { get; set; }
-        public string motivo { get; set; }
-        public string comentario { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public tipoSangre()
+        {
+            this.paciente = new HashSet<paciente>();
+        }
     
-        public virtual empleado empleado { get; set; }
-        public virtual receta receta { get; set; }
+        public int idSangre { get; set; }
+        public string tipo { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<paciente> paciente { get; set; }
     }
 }
