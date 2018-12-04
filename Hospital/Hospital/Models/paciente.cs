@@ -14,6 +14,12 @@ namespace Hospital.Models
     
     public partial class paciente
     {
-        
+        public string cedula { get; set; }
+        public string nombre { get; set; }
+        public string apellido { get; set; }
+        public Nullable<System.DateTime> fechaNacimiento { get; set; }
+        public string tipoSangre { get; set; }
+
+        public string telefono { get; set; }
     }
 }

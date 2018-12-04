@@ -14,6 +14,15 @@ namespace Hospital.Models
     
     public partial class receta
     {
+        public int idReceta { get; set; }
+        public Nullable<int> idPaciente { get; set; }
+        public Nullable<int> idEmpleado { get; set; }
+        public Nullable<System.DateTime> fechaReceta { get; set; }
+        public string detalleReceta { get; set; }
+
+        public virtual empleado empleado { get; set; }
+        public virtual paciente paciente { get; set; }
        
+        public virtual ICollection<visita> visita { get; set; }
     }
 }
