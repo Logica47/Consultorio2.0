@@ -23,7 +23,7 @@
                 </p>
             </div>
             <div class="card-footer">
-                <a href="paginas/blog.html" class="btn btn-primary">Saber Mas...!</a>
+                @Html.ActionLink("Pacientes", "Index","pacientes",null, new {@class= "btn btn-primary" })
             </div>
         </div>
     </div>
@@ -36,7 +36,7 @@
                 <p class="card-text">¿Quieres empezar a aprender y </p>
             </div>
             <div class="card-footer">
-                <a href="#" class="btn btn-primary">Saber Mas...!</a>
+                @Html.ActionLink("Empleados", "Index", "empleadoes", null, new { @class = "btn btn-primary" })
             </div>
         </div>
     </div>
@@ -52,7 +52,7 @@
                 </p>
             </div>
             <div class="card-footer">
-                <a href="#" class="btn btn-primary">Saber Mas...!</a>
+                @Html.ActionLink("Consultas", "Index", "consultas", null, new { @class = "btn btn-primary" })
             </div>
         </div>
     </div>
@@ -60,13 +60,13 @@
         <div class="card">
             <img class="card-img-top" src="~/Content/Media/1hospital.jpg" alt="">
             <div class="card-body">
-                <h4 class="card-title">Horarios</h4>
+                <h4 class="card-title">citas</h4>
                 <p class="card-text">
                     ¿Quieres empezar a aprender y practicar verbos 
                 </p>
             </div>
             <div class="card-footer">
-                <a href="#" class="btn btn-primary">Saber Mas...!</a>
+                @Html.ActionLink("Citas", "Index", "citas", null, new { @class = "btn btn-primary" })
             </div>
         </div>
     </div>

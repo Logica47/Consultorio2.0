@@ -128,7 +128,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\citasController.cs" />
+    <Compile Include="Controllers\consultasController.cs" />
+    <Compile Include="Controllers\empleadoesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\pacientesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -270,6 +274,26 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\pacientes\Create.cshtml" />
+    <Content Include="Views\pacientes\Delete.cshtml" />
+    <Content Include="Views\pacientes\Details.cshtml" />
+    <Content Include="Views\pacientes\Edit.cshtml" />
+    <Content Include="Views\pacientes\Index.cshtml" />
+    <Content Include="Views\empleadoes\Create.cshtml" />
+    <Content Include="Views\empleadoes\Delete.cshtml" />
+    <Content Include="Views\empleadoes\Details.cshtml" />
+    <Content Include="Views\empleadoes\Edit.cshtml" />
+    <Content Include="Views\empleadoes\Index.cshtml" />
+    <Content Include="Views\consultas\Create.cshtml" />
+    <Content Include="Views\consultas\Delete.cshtml" />
+    <Content Include="Views\consultas\Details.cshtml" />
+    <Content Include="Views\consultas\Edit.cshtml" />
+    <Content Include="Views\consultas\Index.cshtml" />
+    <Content Include="Views\citas\Create.cshtml" />
+    <Content Include="Views\citas\Delete.cshtml" />
+    <Content Include="Views\citas\Details.cshtml" />
+    <Content Include="Views\citas\Edit.cshtml" />
+    <Content Include="Views\citas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
