@@ -8,14 +8,13 @@ namespace Hospital.Models
     public partial class visita
     {
         public int idVisita { get; set; }
-        public Nullable<int> idEmpleado { get; set; }
-        public Nullable<int> idReceta { get; set; }
-        public Nullable<System.DateTime> fechaLlegada { get; set; }
-        public Nullable<System.DateTime> proximaFecha { get; set; }
+        public int idEmpleado { get; set; }
+        public int idReceta { get; set; }
+        public DateTime fechaLlegada { get; set; }
+        public DateTime proximaFecha { get; set; }
         public string motivo { get; set; }
         public string comentario { get; set; }
-        public virtual empleado empleado { get; set; }
-        public virtual receta receta { get; set; }
+        public  empleado empleado { get; set; }
+        public receta receta { get; set; }
 
     }
-}

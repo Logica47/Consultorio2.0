@@ -12,6 +12,6 @@ namespace Hospital.Models
 
         public string pass { get; set; }
 
-        public Nullable<int> permiso { get; set; } 
+        public int permiso { get; set; } 
     }
 }
