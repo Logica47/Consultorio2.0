@@ -4,7 +4,7 @@ namespace Hospital.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class login
+    public partial class usuario
     {
         public int idEmpleado { get; set; }
         public string usuario { get; set; }
