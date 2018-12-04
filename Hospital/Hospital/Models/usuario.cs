@@ -7,7 +7,7 @@ namespace Hospital.Models
     public partial class usuario
     {
         public int idEmpleado { get; set; }
-        public string usuario { get; set; }
+        public string user { get; set; }
         public string pass { get; set; }
         public int permiso { get; set; } 
     }
