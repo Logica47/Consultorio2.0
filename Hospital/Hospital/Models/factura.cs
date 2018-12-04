@@ -19,8 +19,5 @@ namespace Hospital.Models
         public int idPaciente { get; set; }
         public DateTime fecha { get; set; }
         public int costo { get; set; }
-
-        public virtual cita cita { get; set; }
-        public virtual paciente paciente { get; set; }
     }
 }
