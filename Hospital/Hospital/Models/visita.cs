@@ -4,7 +4,7 @@ namespace Hospital.Models
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class visita
     {
         public int idVisita { get; set; }
@@ -14,7 +14,7 @@ namespace Hospital.Models
         public DateTime proximaFecha { get; set; }
         public string motivo { get; set; }
         public string comentario { get; set; }
-        public  empleado empleado { get; set; }
-        public receta receta { get; set; }
+
 
     }
+}

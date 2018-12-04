@@ -128,7 +128,7 @@
     <Compile Include="Models\consulta.cs" />
     <Compile Include="Models\empleado.cs" />
     <Compile Include="Models\factura.cs" />
-    <Compile Include="Models\login.cs" />
+    <Compile Include="Models\usuario.cs" />
     <Compile Include="Models\paciente.cs" />
     <Compile Include="Models\receta.cs" />
     <Compile Include="Models\visita.cs" />

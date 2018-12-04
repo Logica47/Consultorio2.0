@@ -7,6 +7,7 @@ namespace Hospital.Models
 {
     public class consulta
     {
+        public int idConsulta { get; set; }
         public int idEmpleado { get; set; }
         public string idPaciente { get; set; }
         public DateTime fechaConsulta { get; set; }
