@@ -14,7 +14,7 @@ namespace Hospital.Models
         public DateTime proximaFecha { get; set; }
         public string motivo { get; set; }
         public string comentario { get; set; }
-       
+
 
     }
 }

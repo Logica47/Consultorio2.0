@@ -19,9 +19,6 @@ namespace Hospital.Models
         public int idEmpleado { get; set; }
         public DateTime fechaReceta { get; set; }
         public string detalleReceta { get; set; }
-
-        public virtual empleado empleado { get; set; }
-        public virtual paciente paciente { get; set; }
        
     }
 }

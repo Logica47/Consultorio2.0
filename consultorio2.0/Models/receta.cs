@@ -12,13 +12,12 @@ namespace Hospital.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class paciente
+    public partial class receta
     {
-        public string cedula { get; set; }
-        public string nombre { get; set; }
-        public string apellido { get; set; }
-        public DateTime fechaNacimiento { get; set; }
-        public string tipoSangre { get; set; }
-        public string telefono { get; set; }
+        public int idReceta { get; set; }
+        public string idPaciente { get; set; }
+        public int idEmpleado { get; set; }
+        public DateTime fechaReceta { get; set; }
+        public string detalleReceta { get; set; }       
     }
 }
