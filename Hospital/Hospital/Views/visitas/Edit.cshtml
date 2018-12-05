@@ -4,7 +4,7 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
+<h2 class="mt-4">Editar</h2>
 
 
 @using (Html.BeginForm())
@@ -18,7 +18,7 @@
         @Html.HiddenFor(model => model.idVisita)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.idEmpleado, "idEmpleado", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.idEmpleado, "Doctor", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("idEmpleado", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.idEmpleado, "", new { @class = "text-danger" })
@@ -26,7 +26,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.idReceta, "idReceta", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.idReceta, "Receta", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("idReceta", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.idReceta, "", new { @class = "text-danger" })

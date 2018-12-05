@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Usuario</h2>
+<h2 class="mt-4">Usuario</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -12,13 +12,13 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.pass)
+            Contraseña
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.permiso)
+            Permisos
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.empleado.nombre)
+            Empleado
         </th>
         <th></th>
     </tr>
@@ -32,7 +32,7 @@
             @Html.DisplayFor(modelItem => item.permiso)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.empleado.nombre)
+            @Html.DisplayFor(modelItem => item.empleado.nombre) @Html.DisplayFor(modelItem => item.empleado.apellido)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.usuario1 }) |

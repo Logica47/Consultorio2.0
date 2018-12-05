@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2 class="mt-4">Recetas</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -12,16 +12,16 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.fechaReceta)
+            Fecha
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.detalleReceta)
+            Detalle
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.empleado.nombre)
+            Doctor
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.paciente.nombre)
+            Pasciente
         </th>
         <th></th>
     </tr>
@@ -35,10 +35,10 @@
             @Html.DisplayFor(modelItem => item.detalleReceta)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.empleado.nombre)
+            @Html.DisplayFor(modelItem => item.empleado.nombre) @Html.DisplayFor(modelItem => item.empleado.apellido)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.paciente.nombre)
+            @Html.DisplayFor(modelItem => item.paciente.nombre) @Html.DisplayFor(modelItem => item.paciente.apellido)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.idReceta }) |
