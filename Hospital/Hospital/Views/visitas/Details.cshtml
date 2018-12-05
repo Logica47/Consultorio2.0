@@ -1,0 +1,66 @@
+﻿@model Hospital.Models.visita
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>visita</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaLlegada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaLlegada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.proximaFecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.proximaFecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.motivo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.motivo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.comentario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.comentario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.empleado.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.empleado.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.receta.idPaciente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.receta.idPaciente)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idVisita }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
