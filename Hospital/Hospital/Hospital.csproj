@@ -211,6 +211,7 @@
     <Content Include="Content\Media\12354.png" />
     <Content Include="Content\Media\1339788964763703.jpg" />
     <Content Include="Content\Media\1hospital.jpg" />
+    <Content Include="Content\Media\trianglify .png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
