@@ -21,13 +21,19 @@ namespace Hospital.Controllers
             return View(usuario.ToList());
         }
 
+        public ActionResult Details()
+        {
+            return View();
+        }
+
         // GET: usuarios/Details/5
-        public ActionResult Details(String user, string pass)
+        [HttpPost]
+        public ActionResult Details(String user, String pass)
         {
             usuario us = db.usuario.FirstOrDefault(d=> d.usuario1== user & d.pass==pass);
+
             int permiso;
            
-
             if (us != null)
             {
                 permiso = us.permiso;
@@ -51,7 +57,7 @@ namespace Hospital.Controllers
             }
             else
             {
-                return View("Details");
+                return HttpNotFound();
             }
 
 
