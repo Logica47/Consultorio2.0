@@ -4,53 +4,79 @@
     ViewBag.Title = "Index";
 }
 
-<h2 class="mt-4">Pacientes</h2>
+<html>
+<body>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            Nombre
-        </th>
-        <th>
-            Apellido
-        </th>
-        <th>
-            Fecha de Nacimiento
-        </th>
-        <th>
-            Telefono
-        </th>
-        <th>
-            Tipo de Sangre
-        </th>
-        <th></th>
-    </tr>
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-info mb-2">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            @Html.ActionLink("Hospital", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <div class="navbar-collapse collapse" id="navbarSupportedContent">
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.apellido)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.fechaNacimiento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.telefono)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.tipoSangre1.tipo)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.cedula }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.cedula })
-        </td>
-    </tr>
-}
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item">@Html.ActionLink("Factura", "Index", "Home", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Citas", "Index", "recetas", null, new { @class = "nav-link" })</li>
+                </ul>
 
-</table>
+            </div>
+        </div>
+    </nav>
+
+    <h2 class="mt-4">Pacientes</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Apellido
+            </th>
+            <th>
+                Fecha de Nacimiento
+            </th>
+            <th>
+                Telefono
+            </th>
+            <th>
+                Tipo de Sangre
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.apellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fechaNacimiento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.telefono)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tipoSangre1.tipo)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.cedula }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.cedula })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+
+
+</body>
+</html>

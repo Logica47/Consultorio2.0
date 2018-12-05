@@ -49,6 +49,7 @@ namespace Hospital.Controllers
                 {
                     return RedirectToAction("Index", "pacientes");
                 }
+                
                 else
                 {
                     return View("Details");
