@@ -22,18 +22,18 @@ namespace Hospital.Controllers
         }
 
         // GET: pacientes/Details/5
-        public ActionResult Details(string id)
+        public ActionResult Details()
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            paciente paciente = db.paciente.Find(id);
-            if (paciente == null)
-            {
-                return HttpNotFound();
-            }
-            return View(paciente);
+            //if (id == null)
+            //{
+            //    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            //}
+            //paciente paciente = db.paciente.Find(id);
+            //if (paciente == null)
+            //{
+            //    return HttpNotFound();
+            //}
+            return View();
         }
 
         // GET: pacientes/Create
