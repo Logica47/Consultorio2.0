@@ -2,52 +2,57 @@
     ViewBag.Title = "Home Page";
 }
 
+<html>
+<body>
 
-<div class="jumbotron mt-4">
-    <h2  class="display-4">Bienvenido</h2>
-    <p class="lead">Aqui la salud esta primero</p>
-    @*<p><a href="http://google.com" class="btn btn-primary btn-large">Learn more &raquo;</a></p>*@
-</div>
+    <div class="jumbotron background-color:transparent !important; bg-info mt-4">
+        <h2 class="display-4 text-white text-center">Bienvenido</h2>
+        <p class="lead text-white text-center mt-2">Aqui la salud esta primero</p>
+        <div class="text-center">
+            <p><a href="http://google.com" class="btn btn-light btn-large btn-responsive mt-2">Ejemplo &raquo;</a></p>
 
-
-<div class="row text-center">
-
-    <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card">
-            <img class="card-img-top" src="~/Content/Media/12354.png" alt="">
-            <div class="card-body">
-                <h4 class="card-title">Doctor</h4>
-                <p class="card-text">
-                    Estos artículos tratan la gramática española.
-
-                </p>
-            </div>
-            <div class="card-footer">
-                @Html.ActionLink("Pacientes", "Index", "pacientes", null, new { @class = "btn btn-primary" })
-            </div>
         </div>
     </div>
 
-    <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card">
-            <img class="card-img-top" src="~/Content/Media/1339788964763703.jpg" alt="">
-            <div class="card-body">
-                <h4 class="card-title">Citas</h4>
-                <p class="card-text">¿Quieres empezar a aprender y </p>
-            </div>
-            <div class="card-footer">
-                @Html.ActionLink("Empleados", "Index", "empleadoes", null, new { @class = "btn btn-primary" })
+
+    <div class="row text-center">
+
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card bg-info ml-2" style="height: 22rem;" >
+                <img class="card-img-top" src="~/Content/Media/12354.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title text-center text-white">Doctor</h4>
+                    <p class="card-text text-center text-white" >
+                        Aqui puedes encontrar , a los mejores doctores.
+
+                    </p>
+                </div>
+                <div class="card-footer">
+                    @Html.ActionLink("Pacientes", "Index", "pacientes", null, new { @class = "btn btn-light" })
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card">
-            <img class="card-img-top" src="~/Content/Media/1hospital.jpg" alt="">
-            <div class="card-body">
-                <h4 class="card-title">Consultas</h4>
-                <p class="card-text">
-                    ¿Quieres empezar a aprender y practicar verbos
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card bg-info mr-4" style="height: 22rem;">
+                <img class="card-img-top" src="~/Content/Media/12354.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title text-center text-white">Citas</h4>
+                    <p class="card-text text-center text-white">Aqui puedes encontrar , a los mejores doctores.</p>
+                </div>
+                <div class="card-footer">
+                    @Html.ActionLink("Empleados", "Index", "empleadoes", null, new { @class = "btn btn-light" })
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card bg-info " style="height: 22rem;">
+                <img class="card-img-top" src="~/Content/Media/12354.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title text-center text-white">Consultas</h4>
+                    <p class="card-text text-center text-white">
+                        Aqui puedes encontrar , a los mejores doctores.
 
                 </p>
             </div>
@@ -60,7 +65,7 @@
         <div class="card">
             <img class="card-img-top" src="~/Content/Media/1hospital.jpg" alt="">
             <div class="card-body">
-                <h4 class="card-title">Citas</h4>
+                <h4 class="card-title">citas</h4>
                 <p class="card-text">
                     ¿Quieres empezar a aprender y practicar verbos
                 </p>
@@ -74,7 +79,7 @@
         <div class="card">
             <img class="card-img-top" src="~/Content/Media/1hospital.jpg" alt="">
             <div class="card-body">
-                <h4 class="card-title">Facturas</h4>
+                <h4 class="card-title">citas</h4>
                 <p class="card-text">
                     ¿Quieres empezar a aprender y practicar verbos
                 </p>
@@ -83,9 +88,14 @@
                 @Html.ActionLink("Facturas", "Index", "facturas", null, new { @class = "btn btn-primary" })
             </div>
         </div>
+
+
     </div>
     </div>
 
+    @Scripts.Render("~/content/media/Site.css")
 
+</body>
+</html>
 
 
