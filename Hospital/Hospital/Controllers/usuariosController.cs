@@ -22,18 +22,45 @@ namespace Hospital.Controllers
         }
 
         // GET: usuarios/Details/5
-        public ActionResult Details(string id)
+        public ActionResult Details(String user, string pass)
         {
-            if (id == null)
+            usuario us = db.usuario.FirstOrDefault(d=> d.usuario1== user & d.pass==pass);
+            int permiso;
+           
+
+            if (us != null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                permiso = us.permiso;
+                if (permiso == 1)
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+                else if (permiso == 2)
+                {
+                    return RedirectToAction("Index", "consultas");
+                }
+                else if (permiso == 3)
+                {
+                    return RedirectToAction("Index", "pacientes");
+                }
+                else
+                {
+                    return View("Details");
+                }
+                //return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            usuario usuario = db.usuario.Find(id);
+            else
+            {
+                return View("Details");
+            }
+
+
+            /*usuario usuario = db.usuario.Find(id);
             if (usuario == null)
             {
                 return HttpNotFound();
-            }
-            return View(usuario);
+            }*/
+           // return View(usuario);
         }
 
         // GET: usuarios/Create
